@@ -1,0 +1,38 @@
+{
+  "name": "md2confl",
+  "short_name": "md2confl",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "markdownからConflence Wikiフォーマットへクリップボード内で変換するChrome拡張です。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "md2confl"
+  },
+  "permissions": [
+    "https://*.atlassian.net/wiki/*",
+    "clipboardRead",
+    "clipboardWrite",
+    "contextMenus",
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.atlassian.net/wiki/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["src/background/bundle.js"],
+    "persistent": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "md2confl-chrome",
+  "version": "0.1.0",
+  "description": "md2confl",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "zip": "zip -r md2confl-chrome.zip . -x package-lock.json -x .gitignore -x \\.git/\\* -x docs/\\* -x node_modules/\\* -x *.zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoito/md2confl-chrome.git"
+  },
+  "author": "@shoito",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shoito/md2confl-chrome/issues"
+  },
+  "homepage": "https://github.com/shoito/md2confl-chrome#readme",
+  "dependencies": {
+    "md2conf": "^1.7.3"
+  },
+  "devDependencies": {
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  }
+}
